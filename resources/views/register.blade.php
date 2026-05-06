@@ -4,7 +4,7 @@
 
 <div style="max-width:420px;margin:40px auto;">
     <div style="text-align:center;margin-bottom:28px;">
-        <div style="font-size:48px;margin-bottom:12px;">📝</div>
+        <div style="font-size:48px;margin-bottom:12px;"></div>
         <h1 style="font-size:2rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:8px;">Register</h1>
         <p style="color:#888;font-size:14px;">Create your TechMinimal account</p>
     </div>
