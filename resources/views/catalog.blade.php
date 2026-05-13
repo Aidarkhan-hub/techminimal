@@ -25,7 +25,7 @@
         {{-- Product Image --}}
         <div style="background:#2c2c2e;height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
             @if($product->image)
-            <img src="{{ Str::startsWith($product->image, 'http') ? $product->image : asset('storage/' . $product->image) }}"            @else
+            <img src="{{ Str::startsWith($product->image, 'http') ? $product->image : asset('storage/' . $product->image) }}" style="width:100%;height:100%;object-fit:cover;">
             <div style="color:#3a3a3c;font-size:40px;"></div>
             @endif
         </div>
