@@ -14,7 +14,7 @@
         <p style="color:var(--muted);font-size:14px;">{{ $products->count() }} products available</p>
     </div>
     @role('seller|admin')
-    <a href="/products/create" style="padding:10px 20px;background:var(--accent);color:#000000;border-radius:10px;text-decoration:none;font-size:14px;font-weight:500;transition:background .2s;" onmouseover="this.style.background='#0077ed'" onmouseout="this.style.background='var(--accent)'">+ {{ __('messages.add_product') }}</a>
+    <a href="/products/create" style="padding:10px 20px;background:var(--accent);color:#000000;border-radius:10px;text-decoration:none;font-size:14px;font-weight:500;transition:background .2s;" onmouseover="this.style.background='#0077ed' " onmouseout="this.style.background='var(--accent)'">+ {{ __('messages.add_product') }}</a>
     @endrole
 </div>
 
@@ -25,8 +25,7 @@
         {{-- Product Image --}}
         <div style="background:#2c2c2e;height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
             @if($product->image)
-            <img src="{{ asset('storage/' . $product->image) }}" style="width:100%;height:180px;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            @else
+            <img src="{{ Str::startsWith($product->image, 'http') ? $product->image : asset('storage/' . $product->image) }}"            @else
             <div style="color:#3a3a3c;font-size:40px;"></div>
             @endif
         </div>
